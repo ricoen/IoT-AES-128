@@ -326,7 +326,7 @@ void loop() {
     //float p = bme.readPressure() / 100.0F; // hPa
     //float a = bme.readAltitude(SEALEVELPRESSURE_HPA);
 
-    //Defini ulang variabel nilai sensor
+    //Definisi ulang variabel nilai sensor
     temp = t;
     humidity = h;
 
