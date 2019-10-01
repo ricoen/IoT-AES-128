@@ -9,7 +9,7 @@ Niyaz PK: http://www.hoozi.com/posts/advanced-encryption-standard-aes-implementa
 This implementation use sensor data from BME280 environmental sensor for plaintext. Added lines for send ciphertext via UDP and TCP/IP (Particle device only). Although it's resulted fair performance and good value of Avalanche Effect, but not recommended for securing real IoT system because its vulnerabilities of using ECB mode that can be analyzed with Side Channel Attack. This code is just for simplicity and readability. 
 
 # TCP/IP & UDP Lines
-This lines is for TCP/IP and UDP function
+This lines is for TCP/IP and UDP function.
 
 To define TCP/IP connection, you can change this line with your destination IP and port.
 ```
