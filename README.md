@@ -12,7 +12,6 @@ This implementation use sensor data from BME280 environmental sensor for plainte
 This lines is for TCP/IP and UDP function
 
 To define TCP/IP connection, you can change this line with your destination IP and port.
-
 ```
 TCPClient client;
 
@@ -45,8 +44,7 @@ if (Udp.sendPacket(enc, sizeof(enc), remoteIP, udpPort) < 0)
   }
 ```
 
-Fore more line function, you can explore in this reference:
-https://docs.particle.io/reference/device-os/firmware/photon/
+Fore more line function, you can explore in this reference: https://docs.particle.io/reference/device-os/firmware/photon/
 
 # Important
 USE FOR EDUCATIONAL PURPOSE ONLY.
