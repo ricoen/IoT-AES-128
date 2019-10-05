@@ -3,7 +3,7 @@
  * Description: Penerapan AES-128 pada Modul IoT
  * Author: ricoen
  * Date: 30 July 2019
- * References of implementation: Nayuki Project, Niyaz PK, Particle Reference, TutorialsPoint
+ * References of implementation: Nayuki Project, Niyaz PK, Particle Reference
 */
 
 // Tambah library di sini.
