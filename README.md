@@ -15,7 +15,7 @@ USE FOR EDUCATIONAL PURPOSE ONLY.
 
 General: https://github.com/kokke/tiny-AES-c
 
-Embedded: https://tls.mbed.org/
+Embedded system: https://tls.mbed.org/
 
 ESP32: https://github.com/espressif/arduino-esp32/tree/master/tools/sdk/include/mbedtls
 
