@@ -6,7 +6,17 @@ Project Nayuki: https://www.nayuki.io/page/cryptographic-primitives-in-plain-pyt
 
 Niyaz PK: http://www.hoozi.com/posts/advanced-encryption-standard-aes-implementation-in-cc-with-comments-part-2-decryption/
 
-This implementation use sensor data from BME280 environmental sensor for plaintext. Added lines for send ciphertext via UDP and TCP/IP (Particle device only). Although it's resulted fair performance and good value of Avalanche Effect, but it can't be used for securing real IoT system because its vulnerabilities of using default mode (ECB mode) that can be analyzed with Side Channel Attack. This code is just for simplicity and readability.
+This implementation use sensor data from BME280 environmental sensor for plaintext. Added lines for send ciphertext via UDP and TCP/IP (Particle device only). Although it's resulted fair performance and good value of Avalanche Effect, but it can't be used for securing real IoT system because its vulnerabilities of using default mode (ECB mode) that can be analyzed with Side Channel Attack. This code is just for simplicity and readability to explain how AES algorithm is.
+
+For real IoT system use this cryptographic API & library instead:
+
+General: https://github.com/kokke/tiny-AES-c
+
+Embedded: https://tls.mbed.org/
+
+ESP32: https://github.com/espressif/arduino-esp32/tree/master/tools/sdk/include/mbedtls
+
+Samsung Artik: https://developer.artik.io/documentation/advanced-concepts/secure-os/openssl.html#aes-test-case-1
 
 # TCP/IP & UDP Lines
 This lines is for TCP/IP and UDP function.
