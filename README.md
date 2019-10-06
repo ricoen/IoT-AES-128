@@ -19,7 +19,7 @@ Embedded: https://tls.mbed.org/
 
 ESP32: https://github.com/espressif/arduino-esp32/tree/master/tools/sdk/include/mbedtls
 
-Samsung Artik: https://developer.artik.io/documentation/advanced-concepts/secure-os/openssl.html#aes-test-case-1
+Samsung Artik: https://developer.artik.io/documentation/advanced-concepts/secure-os/openssl.html
 
 # TCP/IP & UDP Lines
 This lines is for TCP/IP and UDP function.
