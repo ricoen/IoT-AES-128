@@ -8,7 +8,7 @@ Niyaz PK: http://www.hoozi.com/posts/advanced-encryption-standard-aes-implementa
 
 This implementation use sensor data from BME280 environmental sensor for plaintext. Added lines for send ciphertext via UDP and TCP/IP (Particle device only). Although it's resulted fair performance and good value of Avalanche Effect, but it can't be used for securing real IoT system because its vulnerabilities of using default mode (ECB mode) that can be analyzed with Side Channel Attack. This code is just for simplicity and readability to explain how AES algorithm is.
 
-For real IoT system use this cryptographic API & library instead:
+# For real IoT system use this cryptographic API or library instead
 
 General: https://github.com/kokke/tiny-AES-c
 
