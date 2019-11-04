@@ -237,7 +237,7 @@ void Cipher()
 // int enkripTime = 0;
 // int idleTime = 0;
 
-void enkrip() {
+void encrypt() {
   int i;
   char enc[33];
 
@@ -330,8 +330,8 @@ void setup() {
 
 void loop()
 {
-  // enkrip();
-	// idle();
+  	encrypt();
+	idle();
 
 	// if (millis() - enkripTime >= 1600) {
 	// enkrip();
