@@ -333,12 +333,12 @@ void loop()
   	encrypt();
 	idle();
 
-	// if (millis() - enkripTime >= 1600) {
-	// enkrip();
-	// enkripTime = millis();
+	// if (millis() - encryptTime >= 1600) {
+	// encrypt();
+	// encryptTime = millis();
 	// }
 	// if (millis() - idleTime >= 1600) {
 	// idle();
-	// idleTime = micros();
+	// idleTime = millis();
 	// }
 }
