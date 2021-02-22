@@ -66,25 +66,25 @@ Fore more line functions, you can explore in this reference:
 View aes_upnocon.c file.
 
 # Test Results
-1. AES Performance
+**1. AES Performance**
+  
   This test purpose is to find throughput and Avalanche Effect of the algorithm implementation in the system. The test results was taken from 10 times encryption.
   <p align="center">
   <img width="460" height="300" src="https://i.postimg.cc/C15gMP9v/Screenshot-from-2021-02-22-09-48-02.png">
   </p>
-  Notes:
-  X-axis is encryption time
-  Y-Axis is troughput
+  Notes: X-axis is encryption time, Y-Axis is troughput
 
 2. Energy Consumption
+  
   This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
-  <p>
-  <img align="left" width="100" height="100" src="https://postimg.cc/n9ZWthQh">
-  <p>
+  <p align="center">
+  <img align="left" width="100" height="100" src="https://i.postimg.cc/QCWZ1B81/Screenshot-from-2021-02-22-09-42-57.png">
+  </p>
 
   The value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of energy in time interval.
-  <p>
-  <img align="left" width="100" height="100" src="https://postimg.cc/bZygqqfV">
+  <p align="center">
+  <img align="left" width="100" height="100" src="https://i.postimg.cc/vZ9NLmqy/Screenshot-from-2021-02-22-10-02-43.png">
   </P>
-  <p>
-  <img align="left" width="100" height="100" src="https://postimg.cc/TLr2132D">
+  <p align="center">
+  <img align="left" width="100" height="100" src="https://i.postimg.cc/tTcsrsL2/Screenshot-from-2021-02-22-09-55-00.png">
   </P>
