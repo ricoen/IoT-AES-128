@@ -69,7 +69,7 @@ View aes_upnocon.c file.
 1. AES Performance
   This test purpose is to find throughput and Avalanche Effect of the algorithm implementation in the system. The test results was taken from 10 times encryption.
   <p align="center">
-  <img width="460" height="300" src="[![Screenshot-from-2021-02-22-09-48-02.png](https://i.postimg.cc/C15gMP9v/Screenshot-from-2021-02-22-09-48-02.png)](https://postimg.cc/rdBbQJVW)">
+  <img width="460" height="300" src="https://i.postimg.cc/C15gMP9v/Screenshot-from-2021-02-22-09-48-02.png">
   </p>
   Notes:
   X-axis is encryption time
