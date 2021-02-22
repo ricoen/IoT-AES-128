@@ -67,15 +67,14 @@ View aes_upnocon.c file.
 
 # Test Results
 **1. AES Performance**
-  
   This test purpose is to find throughput and Avalanche Effect of the algorithm implementation in the system. The test results was taken from 10 times encryption.
   <p align="center">
   <img width="640" height="480" src="https://i.postimg.cc/C15gMP9v/Screenshot-from-2021-02-22-09-48-02.png">
   </p>
   Notes: X-axis is encryption time, Y-Axis is troughput
-
-2. Energy Consumption
   
+
+**2. Energy Consumption**
   This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
   <p align="center">
   <img width="640" height="480" src="https://i.postimg.cc/QCWZ1B81/Screenshot-from-2021-02-22-09-42-57.png">
