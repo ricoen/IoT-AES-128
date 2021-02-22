@@ -74,7 +74,7 @@ This test purpose is to find throughput and Avalanche Effect of the algorithm im
 </p>
 Notes:</br> 
 X-axis is encryption time</br>
-Y-Axis is troughput</br>
+Y-Axis is troughput
   
 **2. Energy Consumption**
 
@@ -83,7 +83,7 @@ This test purpose is to find how much energy used for one time encryption. The m
 <img width="320" height="240" src="https://i.postimg.cc/QCWZ1B81/Screenshot-from-2021-02-22-09-42-57.png">
 </p>
 
-&ensp;The value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of energy in time interval.
+The value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of energy in time interval.
 <p align="center">
 <img width="320" height="240" src="https://i.postimg.cc/vZ9NLmqy/Screenshot-from-2021-02-22-10-02-43.png">
 </P>
