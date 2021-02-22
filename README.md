@@ -83,7 +83,7 @@ Y-Axis is troughput</br>
 <img width="320" height="240" src="https://i.postimg.cc/QCWZ1B81/Screenshot-from-2021-02-22-09-42-57.png">
 </p>
 
-&enspThe value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of energy in time interval.
+&ensp;The value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of energy in time interval.
 <p align="center">
 <img width="320" height="240" src="https://i.postimg.cc/vZ9NLmqy/Screenshot-from-2021-02-22-10-02-43.png">
 </P>
@@ -91,5 +91,8 @@ Y-Axis is troughput</br>
 <img width="320" height="240" src="https://i.postimg.cc/tTcsrsL2/Screenshot-from-2021-02-22-09-55-00.png">
 </P>
   
-#References
->Elminaam, D. S. A., Kader, H. M. A. & Hadhoud, M. M., 2010. Evaluating The Performance of Symmetric Encryption Algorithms. International Journal of Network Security, 10(3), pp. 213-219.
+# References
+>Abdelgawad, A., 2014. Distributed data fusion algorithm for Wireless Sensor Network. Miami, IEEE.</br>
+>Elminaam, D. S. A., Kader, H. M. A. & Hadhoud, M. M., 2010. Evaluating The Performance of Symmetric Encryption Algorithms. International Journal of Network Security, 10(3), pp. 213-219.</br>
+>Donnay, V. J., 2013. Solar Panels, Energy and Area Under the Curve Teacher Guide, Bryn Mawr: Bryn Mawr College.
+>Moreno, C. & Fischmeister, S., 2017. Accurate Measurement of Small Execution Times – Getting Around Measurement Errors, Waterloo: University of Waterloo.
