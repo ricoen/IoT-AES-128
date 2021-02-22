@@ -67,16 +67,24 @@ View aes_upnocon.c file.
 
 # Test Results
 1. AES Performance
-This test purpose is to find throughput and Avalanche Effect of the algorithm implementation in the system. The test results was taken from 10 times encryption.
-<img align="left" width="100" height="100" src="https://postimg.cc/rdBbQJVW">
-Notes:
-X-axis is encryption time
-Y-Axis is troughput
+  This test purpose is to find throughput and Avalanche Effect of the algorithm implementation in the system. The test results was taken from 10 times encryption.
+  <p>
+  <img align="left" width="100" height="100" src="https://postimg.cc/rdBbQJVW">
+  </p>
+  Notes:
+  X-axis is encryption time
+  Y-Axis is troughput
 
 2. Energy Consumption
-This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
-<img align="left" width="100" height="100" src="https://postimg.cc/n9ZWthQh">
+  This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
+  <p>
+  <img align="left" width="100" height="100" src="https://postimg.cc/n9ZWthQh">
+  <p>
 
-The value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of energy in time interval.
-<img align="left" width="100" height="100" src="https://postimg.cc/bZygqqfV">
-<img align="left" width="100" height="100" src="https://postimg.cc/TLr2132D">
+  The value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of energy in time interval.
+  <p>
+  <img align="left" width="100" height="100" src="https://postimg.cc/bZygqqfV">
+  </P>
+  <p>
+  <img align="left" width="100" height="100" src="https://postimg.cc/TLr2132D">
+  </P>
