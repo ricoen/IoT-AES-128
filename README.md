@@ -72,8 +72,8 @@ This test purpose is to find throughput and Avalanche Effect of the algorithm im
 <img width="320" height="240" src="https://i.postimg.cc/C15gMP9v/Screenshot-from-2021-02-22-09-48-02.png">
 </p>
 Notes:</br> 
-X-axis is encryption time<br>
-Y-Axis is troughput
+X-axis is encryption time (microsecond)<br>
+Y-Axis is troughput (bit/second)
 
 ### 2. Energy Consumption
 This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
@@ -89,8 +89,8 @@ The value of energy consumption is measured in 12 miliseconds time interval usin
 <img width="320" height="240" src="https://i.postimg.cc/tTcsrsL2/Screenshot-from-2021-02-22-09-55-00.png">
 </P>
 Notes:<br>
-X-axis is conditition<br>
-Y-Axis is Energy consumption
+X-axis is conditition (encrypt/idle)<br>
+Y-Axis is Energy consumption (Joule)
   
 ## References
 >Abdelgawad, A., 2014. Distributed data fusion algorithm for Wireless Sensor Network. Miami, IEEE.</br>
