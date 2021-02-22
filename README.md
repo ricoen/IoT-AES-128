@@ -81,13 +81,16 @@ This test purpose is to find how much energy used for one time encryption. The m
 <img width="320" height="240" src="https://i.postimg.cc/QCWZ1B81/Screenshot-from-2021-02-22-09-42-57.png">
 </p>
 
-The value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of energy in time interval.
+The value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of power and energy consumed for encryption in time interval.
 <p align="center">
 <img width="320" height="240" src="https://i.postimg.cc/vZ9NLmqy/Screenshot-from-2021-02-22-10-02-43.png">
 </P>
 <p align="center">
 <img width="320" height="240" src="https://i.postimg.cc/tTcsrsL2/Screenshot-from-2021-02-22-09-55-00.png">
 </P>
+Notes:<br>
+X-axis is conditition<br>
+Y-Axis is Energy consumption
   
 ## References
 >Abdelgawad, A., 2014. Distributed data fusion algorithm for Wireless Sensor Network. Miami, IEEE.</br>
