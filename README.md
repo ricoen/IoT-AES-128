@@ -90,7 +90,7 @@ The value of energy consumption is measured in 12 miliseconds time interval usin
 </P>
 Notes:<br>
 X-axis is conditition (encrypt/idle)<br>
-Y-Axis is Energy consumption (miliJoules)
+Y-Axis is Energy consumption (milliJoules)
   
 ## References
 >Abdelgawad, A., 2014. Distributed data fusion algorithm for Wireless Sensor Network. Miami, IEEE.</br>
