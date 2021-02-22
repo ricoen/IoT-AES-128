@@ -68,7 +68,7 @@ View aes_upnocon.c file.
 # Test Results
 **1. AES Performance**
 
-&ensp;This test purpose is to find throughput and Avalanche Effect of the algorithm implementation in the system. The test results was taken from 10 times encryption.
+This test purpose is to find throughput and Avalanche Effect of the algorithm implementation in the system. The test results was taken from 10 times encryption.
 <p align="center">
 <img width="320" height="240" src="https://i.postimg.cc/C15gMP9v/Screenshot-from-2021-02-22-09-48-02.png">
 </p>
@@ -78,7 +78,7 @@ Y-Axis is troughput</br>
   
 **2. Energy Consumption**
 
-&ensp;This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
+This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
 <p align="center">
 <img width="320" height="240" src="https://i.postimg.cc/QCWZ1B81/Screenshot-from-2021-02-22-09-42-57.png">
 </p>
@@ -93,6 +93,9 @@ Y-Axis is troughput</br>
   
 # References
 >Abdelgawad, A., 2014. Distributed data fusion algorithm for Wireless Sensor Network. Miami, IEEE.</br>
+>
 >Elminaam, D. S. A., Kader, H. M. A. & Hadhoud, M. M., 2010. Evaluating The Performance of Symmetric Encryption Algorithms. International Journal of Network Security, 10(3), pp. 213-219.</br>
+>
 >Donnay, V. J., 2013. Solar Panels, Energy and Area Under the Curve Teacher Guide, Bryn Mawr: Bryn Mawr College.
+>
 >Moreno, C. & Fischmeister, S., 2017. Accurate Measurement of Small Execution Times – Getting Around Measurement Errors, Waterloo: University of Waterloo.
