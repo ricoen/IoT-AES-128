@@ -21,7 +21,6 @@ Embedded system: https://tls.mbed.org/
 
 ESP32: https://github.com/espressif/arduino-esp32/tree/master/tools/sdk/include/mbedtls
 
-Samsung Artik: https://developer.artik.io/documentation/advanced-concepts/secure-os/openssl.html
 
 # TCP/IP & UDP Lines
 This lines is for TCP/IP and UDP function.
@@ -65,3 +64,19 @@ Fore more line functions, you can explore in this reference:
 
 # Don't need to connect to UDP and TCP/IP?
 View aes_upnocon.c file.
+
+# Test Results
+1. AES Performance
+This test purpose is to find throughput and Avalanche Effect of the algorithm implementation in the system. The test results was taken from 10 times encryption.
+<img align="left" width="100" height="100" src="https://postimg.cc/rdBbQJVW">
+Notes:
+X-axis is encryption time
+Y-Axis is troughput
+
+2. Energy Consumption
+This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
+<img align="left" width="100" height="100" src="https://postimg.cc/n9ZWthQh">
+
+The value of energy consumption is measured in 12 miliseconds time interval using oscilloscope. The results is the average of energy in time interval.
+<img align="left" width="100" height="100" src="https://postimg.cc/bZygqqfV">
+<img align="left" width="100" height="100" src="https://postimg.cc/TLr2132D">
