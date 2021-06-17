@@ -87,7 +87,7 @@ $$ -->
 
 Notes:</br> 
 X-axis is encryption time (microseconds)<br>
-Y-Axis is troughput (bits/seconds)
+Y-Axis is troughput (bits/second)
 
 ### 2. Energy Consumption
 This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
