@@ -23,7 +23,7 @@ double temp;
 double humidity;
 
 /*
---- Program enkripsi dimulai di sini ---
+--- Encryption program starts here ---
 */
 #define Nb 4
 
@@ -234,9 +234,6 @@ void Cipher()
 	}
 }
 
-// int enkripTime = 0;
-// int idleTime = 0;
-
 void encrypt() {
   int i;
   char enc[33];
@@ -304,7 +301,10 @@ void encrypt() {
 	for(i=0; i<Nk*4; i++)
 	{
 	  Serial.printf("%02x ",out[i]);
-    snprintf(enc, sizeof(enc), "%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x", out[0], out[1], out[2], out[3], out[4], out[5], out[6], out[7], out[8], out[9], out[10], out[11], out[12], out[13], out[14], out[15]);
+    snprintf(enc, sizeof(enc),\ 
+	"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",\
+	out[0], out[1], out[2], out[3], out[4], out[5], out[6], out[7],\ 
+	out[8], out[9], out[10], out[11], out[12], out[13], out[14], out[15]);
 	}
 	Serial.printlnf("");
 	Serial.printf("%s\n", enc);
@@ -312,9 +312,12 @@ void encrypt() {
   Serial.printlnf("\n\n");
 }
 
+/*
+--- Idle function is to measure Vshunt so we can calculate the Power (P) and Energy (E) ---
+*/
 void idle() {
 	/* do nothing */
-	delay(1600);
+	delay(2000);
 }
 
 void setup() {
@@ -332,13 +335,4 @@ void loop()
 {
   	encrypt();
 	idle();
-
-	// if (millis() - encryptTime >= 1600) {
-	// encrypt();
-	// encryptTime = millis();
-	// }
-	// if (millis() - idleTime >= 1600) {
-	// idle();
-	// idleTime = millis();
-	// }
 }

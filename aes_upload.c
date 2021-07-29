@@ -325,21 +325,15 @@ void loop()
 	for(i=0; i<Nk*4; i++)
 	{
 	  Serial.printf("%02x ",out[i]);
-    snprintf(enc, sizeof(enc), "%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x", out[0], out[1], out[2], out[3], out[4], out[5], out[6], out[7], out[8], out[9], out[10], out[11], out[12], out[13], out[14], out[15]);
+    snprintf(enc, sizeof(enc),\
+	"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",\ 
+	out[0], out[1], out[2], out[3], out[4], out[5], out[6], out[7],\ 
+	out[8], out[9], out[10], out[11], out[12], out[13], out[14], out[15]);
 	}
 
-  unsigned long start = micros();
-
   Serial.printlnf("\n");
-  Serial.printf("Mengirim cipherteks via TCP/IP dan UDP: %s", enc);
+  Serial.printf("Send the ciphertext via TCP/IP and UDP: %s", enc);
 	Serial.printlnf("\n\n");
-
-  unsigned long current = micros();
-  Serial.printf("Waktu (mikrodetik): ");
-  unsigned long delta = current-start;
-
-  Serial.println(delta);
-  Serial.printlnf("\n\n");
 
   if (client.connected())
   {
@@ -348,6 +342,6 @@ void loop()
 
   if (Udp.sendPacket(enc, sizeof(enc), remoteIP, udpPort) < 0)
   {
-    Serial.printlnf("Error");
+    Serial.printlnf("Error to send packet");
   }
 }
