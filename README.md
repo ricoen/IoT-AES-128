@@ -76,7 +76,7 @@ The time of encryption can be measured with the formula below:<br>
 time_{encryption} = time_{end} - time_{start}
 $$ --> 
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=time_%7Bencryption%7D%20%3D%20time_%7Bend%7D%20-%20time_%7Bstart%7D"></div>
+<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=time_%7Bencryption%7D%20%3D%20time_%7Bend%7D%20-%20time_%7Bstart%7D"></div><br>
 
 For the throughput can be measured with this formula below:
 <!-- $$
@@ -85,9 +85,9 @@ $$ -->
 
 <div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=throughput%20%3D%20%5Cfrac%7Bsize_%7Bplaintext%7D%5C%2C%7B(bit)%7D%7D%7Bt_%7Bencryption%7D%5C%2C%7B(s)%7D%7D"></div>
 
-Notes:</br> 
+Notes:<br>
 X-axis is encryption time (microseconds)<br>
-Y-Axis is troughput (bits/second)
+Y-Axis is troughput (bits/second)<br></br>
 
 ### 2. Energy Consumption
 This test purpose is to find how much energy used for one time encryption. The method used for this test is calculate Vshunt of the IoT modules such in the picture below.
