@@ -76,7 +76,7 @@ The time of encryption can be measured with the formula below:<br>
 time_{encryption} = time_{end} - time_{start}
 $$ --> 
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=time_%7Bencryption%7D%20%3D%20time_%7Bend%7D%20-%20time_%7Bstart%7D"></div><br>
+<div align="center"><img style="background: white;" src="https://latex.codecogs.com/gif.latex?{\color{Orange}&space;time_{encryption}&space;=&space;time_{end}&space;-&space;time_{start}}"></div><br>
 
 For the throughput can be measured with this formula below:
 <!-- $$
