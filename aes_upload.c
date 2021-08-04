@@ -46,9 +46,8 @@ unsigned char RoundKey[240];
 
 unsigned char Key[32];
 
-int getSBoxValue(int num)
-{
-	int sbox[256] =   {
+int getSBoxValue(int num) {
+	int sbox[256] = {
 	//0     1    2      3     4    5     6     7      8    9     A      B    C     D     E     F
 	0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76, //0
 	0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0, //1
@@ -87,27 +86,22 @@ int Rcon[255] = {
 	0xc6, 0x97, 0x35, 0x6a, 0xd4, 0xb3, 0x7d, 0xfa, 0xef, 0xc5, 0x91, 0x39, 0x72, 0xe4, 0xd3, 0xbd,
 	0x61, 0xc2, 0x9f, 0x25, 0x4a, 0x94, 0x33, 0x66, 0xcc, 0x83, 0x1d, 0x3a, 0x74, 0xe8, 0xcb  };
 
-void KeyExpansion()
-{
+void KeyExpansion() {
 	int i, j;
 	unsigned char temp[4], k;
 
-	for(i=0; i<Nk; i++)
-	{
+	for(i=0; i<Nk; i++) {
 		RoundKey[i*4] = Key[i*4];
 		RoundKey[i*4+1] = Key[i*4+1];
 		RoundKey[i*4+2] = Key[i*4+2];
 		RoundKey[i*4+3] = Key[i*4+3];
 	}
 
-	while (i<(Nb*(Nr+1)))
-	{
-		for(j=0; j<4; j++)
-		{
+	while (i<(Nb*(Nr+1))) {
+		for(j=0; j<4; j++) {
 			temp[j] = RoundKey[(i-1)*4+j];
 		}
-		if (i%Nk == 0)
-		{
+		if (i%Nk == 0) {
 			{
 				k = temp[0];
 				temp[0] = temp[1];
@@ -125,9 +119,7 @@ void KeyExpansion()
 
 			temp[0] = temp[0]^Rcon[i/Nk];
 		}
-		else if (Nk>6 && i%Nk == 4)
-		{
-
+		else if (Nk>6 && i%Nk == 4) {
 			{
 				temp[0] = getSBoxValue(temp[0]);
 				temp[1] = getSBoxValue(temp[1]);
@@ -143,32 +135,21 @@ void KeyExpansion()
 	}
 }
 
-void AddRoundKey(int round)
-{
+void AddRoundKey(int round) {
 	int i,j;
-	for(i=0; i<4; i++)
-	{
-		for(j=0; j<4; j++)
-		{
-			state[j][i] ^= RoundKey[round*Nb*4+i*Nb+j];
-		}
+	for(i=0; i<4; i++) {
+		for(j=0; j<4; j++) state[j][i] ^= RoundKey[round*Nb*4+i*Nb+j];
 	}
 }
 
-void SubBytes()
-{
+void SubBytes() {
 	int i,j;
-	for(i=0; i<4; i++)
-	{
-		for(j=0; j<4; j++)
-		{
-			state[i][j] = getSBoxValue(state[i][j]);
-		}
+	for(i=0; i<4; i++) {
+		for(j=0; j<4; j++) state[i][j] = getSBoxValue(state[i][j]);
 	}
 }
 
-void ShiftRows()
-{
+void ShiftRows() {
 	unsigned char temp;
 
 	temp = state[1][0];
@@ -194,12 +175,10 @@ void ShiftRows()
 
 #define xtime(x)  ((x<<1) ^ (((x>>7) & 1) * 0x1b))
 
-void MixColumns()
-{
+void MixColumns() {
 	int i;
 	unsigned char Tmp,Tm,t;
-	for(i=0; i<4; i++)
-	{
+	for(i=0; i<4; i++) {
 		t = state[0][i];
 		Tmp = state[0][i] ^ state[1][i] ^ state[2][i] ^ state[3][i] ;
 		Tm = state[0][i] ^ state[1][i] ; Tm = xtime(Tm); state[0][i] ^= Tm ^ Tmp ;
@@ -209,22 +188,18 @@ void MixColumns()
 	}
 }
 
-void Cipher()
-{
+void Cipher() {
 	int i, j, round = 0;
 
-	for(i=0; i<4; i++)
-	{
-		for(j=0; j<4; j++)
-		{
+	for(i=0; i<4; i++) {
+		for(j=0; j<4; j++) {
 			state[j][i] = in[i*4 + j];
 		}
 	}
 
 	AddRoundKey(0);
 
-	for(round=1; round<Nr; round++)
-	{
+	for(round=1; round<Nr; round++) {
 		SubBytes();
 		ShiftRows();
 		MixColumns();
@@ -235,86 +210,73 @@ void Cipher()
 	ShiftRows();
 	AddRoundKey(Nr);
 
-	for(i=0; i<4; i++)
-	{
-		for(j=0; j<4; j++)
-		{
+	for(i=0; i<4; i++) {
+		for(j=0; j<4; j++) {
 			out[i*4+j] = state[j][i];
 		}
 	}
 }
 
 void setup() {
-  Serial.begin(9600);
-  Serial.println(F("BME280 test"));
+	Serial.begin(9600);
+	Serial.println(F("BME280 test"));
 
-  // if (!bme.begin(0x76)) {
-  if (!bme.begin()) {
-    Serial.println("Could not find a valid BME280 sensor, check wiring!");
-    while (1);
-  }
-  client.connect(tcpIP, tcpPort);
-  Udp.begin(8888);
+	// if (!bme.begin(0x76)) {
+	if (!bme.begin()) {
+		Serial.println("Could not find a valid BME280 sensor, check wiring!");
+		while (1);
+	}
+	client.connect(tcpIP, tcpPort);
+	Udp.begin(8888);
 }
 
-void loop()
-{
-  int i;
-  char enc[33];
+void loop() {
+	int i;
+	char enc[33];
 
-	Nr = 128;
+		Nr = 128;
 
-	Nk = Nr / 32;
-	Nr = Nk + 6;
+		Nk = Nr / 32;
+		Nr = Nk + 6;
 
-  float t = bme.readTemperature(); // *C
-  float h = bme.readHumidity(); // %
+	float t = bme.readTemperature(); // *C
+	float h = bme.readHumidity(); // %
 
-  //float p = bme.readPressure() / 100.0F; // hPa
-  //float a = bme.readAltitude(SEALEVELPRESSURE_HPA);
+	//float p = bme.readPressure() / 100.0F; // hPa
+	//float a = bme.readAltitude(SEALEVELPRESSURE_HPA);
 
-  temp = t;
-  humidity = h;
+	temp = t;
+	humidity = h;
 
-  String data = "t "+ String::format("%.1f",temp)+ ", "+ "h "+ String::format("%.2f",humidity);
+	String data = "t "+ String::format("%.1f",temp)+ ", "+ "h "+ String::format("%.2f",humidity);
 
-  Serial.printlnf(data);
+	Serial.printlnf(data);
 
-  char temp[16] = "inikuncinyagan";
-  int len = 16;
+	char temp[16] = "inikuncinyagan";
+	int len = 16;
 
-  Serial.printlnf("");
+	Serial.printlnf("");
 
-  Serial.printlnf("Kunci:");
-  for (i=0; i<len; i++)
-  {
-    if (i>0) Serial.printf(" ");
-    Serial.printf("%02X", temp[i]);
-  }
-  Serial.printlnf("\n");
+	Serial.printlnf("Kunci:");
+	for (i=0; i<len; i++) {
+		if (i>0) Serial.printf(" ");
+			Serial.printf("%02X", temp[i]);
+	}
+	Serial.printlnf("\n");
 
-  Serial.printlnf("Plaintext (Hex):");
-  for (i=0; i<len; i++)
-  {
-    if (i>0) Serial.printf(" ");
-    Serial.printf("%02X", data[i]);
-  }
-  Serial.printlnf("\n");
+	Serial.printlnf("Plaintext (Hex):");
+	for (i=0; i<len; i++) {
+		if (i>0) Serial.printf(" ");
+			Serial.printf("%02X", data[i]);
+	}
+	Serial.printlnf("\n");
 
-	for(i=0; i<Nk*4; i++)
-	{
-    for (i=0; i<len; ++i)
-    {
-      Key[i] = ("%02x", temp[i]);
-    }
+	for(i=0; i<Nk*4; i++) {
+		for (i=0; i<len; ++i) Key[i] = ("%02x", temp[i]);
 	}
 
-	for(i=0; i<Nb*4; i++)
-	{
-    for (i=0; i<len; ++i)
-		{
-      in[i] = ("%02x", data[i]);
-		}
+	for(i=0; i<Nb*4; i++) {
+		for (i=0; i<len; ++i) in[i] = ("%02x", data[i]);
 	}
 
 	KeyExpansion();
@@ -322,26 +284,23 @@ void loop()
 	Cipher();
 
 	Serial.printlnf("Ciphertext:");
-	for(i=0; i<Nk*4; i++)
-	{
-	  Serial.printf("%02x ",out[i]);
-    snprintf(enc, sizeof(enc),\
-	"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",\ 
-	out[0], out[1], out[2], out[3], out[4], out[5], out[6], out[7],\ 
-	out[8], out[9], out[10], out[11], out[12], out[13], out[14], out[15]);
+	for(i=0; i<Nk*4; i++) {
+		Serial.printf("%02x ",out[i]);
+		snprintf(enc, sizeof(enc),\
+		"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",\ 
+		out[0], out[1], out[2], out[3], out[4], out[5], out[6], out[7],\ 
+		out[8], out[9], out[10], out[11], out[12], out[13], out[14], out[15]);
 	}
 
-  Serial.printlnf("\n");
-  Serial.printf("Send the ciphertext via TCP/IP and UDP: %s", enc);
+	Serial.printlnf("\n");
+	Serial.printf("Send the ciphertext via TCP/IP and UDP: %s", enc);
 	Serial.printlnf("\n\n");
 
-  if (client.connected())
-  {
-    client.write(enc);
-  }
+	if (client.connected()) {
+		client.write(enc);
+	}
 
-  if (Udp.sendPacket(enc, sizeof(enc), remoteIP, udpPort) < 0)
-  {
-    Serial.printlnf("Error to send packet");
-  }
+	if (Udp.sendPacket(enc, sizeof(enc), remoteIP, udpPort) < 0) {
+		Serial.printlnf("Error to send packet");
+	}
 }
