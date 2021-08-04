@@ -76,14 +76,14 @@ The time of encryption can be measured with the formula below:<br>
 time_{encryption} = time_{end} - time_{start}
 $$ --> 
 
-<div align="center"><img style="background: white;" src="https://latex.codecogs.com/png.latex?{\color{DarkOrange}&space;time_{encryption}&space;=&space;time_{end}&space;-&space;time_{start}}"></div><br>
+<div align="center"><img style="background: white;" src="https://latex.codecogs.com/png.latex?{\color{Teal}&space;time_{encryption}&space;=&space;time_{end}&space;-&space;time_{start}}"></div><br>
 
 For the throughput can be measured with this formula below:
 <!-- $$
 throughput = \frac{size_{plaintext}\,{(bit)}}{t_{encryption}\,{(s)}}
 $$ --> 
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=throughput%20%3D%20%5Cfrac%7Bsize_%7Bplaintext%7D%5C%2C%7B(bit)%7D%7D%7Bt_%7Bencryption%7D%5C%2C%7B(s)%7D%7D"></div>
+<div align="center"><img style="background: white;" src="https://latex.codecogs.com/png.latex?{\color{Teal}&space;throughput&space;=&space;\frac{size_{plaintext}\,{(bit)}}{t_{encryption}\,{(s)}}}"></div>
 
 Notes:<br>
 X-axis is encryption time (microseconds)<br>
@@ -104,7 +104,7 @@ The power needed for one cycle encryption process (12 miliseconds) can be measur
 P = V_{n}\,{I} = V_{supply} - V_{shunt}\, \left( \frac{V_{shunt}}{R_{shunt}} \right)
 $$ --> 
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=P%20%3D%20V_%7Bn%7D%5C%2C%7BI%7D%20%3D%20V_%7Bsupply%7D%20-%20V_%7Bshunt%7D%5C%2C%20%5Cleft(%20%5Cfrac%7BV_%7Bshunt%7D%7D%7BR_%7Bshunt%7D%7D%20%5Cright)"></div><br>
+<div align="center"><img style="background: white;" src="https://latex.codecogs.com/png.latex?{\color{Teal}&space;P&space;=&space;V_{n}\,{I}&space;=&space;V_{supply}&space;-&space;V_{shunt}\,&space;\left(&space;\frac{V_{shunt}}{R_{shunt}}&space;\right)}"></div><br>
 
 <p align="center">
 <img width="320" height="240" src="https://i.postimg.cc/tTcsrsL2/Screenshot-from-2021-02-22-09-55-00.png">
@@ -114,7 +114,7 @@ And the energy needed for one cycle encryption can be measured with the formula 
 E = P\,t
 $$ --> 
 
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=E%20%3D%20P%5C%2Ct"></div>
+<div align="center"><img style="background: white;" src="https://latex.codecogs.com/png.latex?{\color{Teal}&space;E&space;=&space;P\,t}"></div>
 
 Notes:<br>
 X-axis is conditition (encrypt/idle)<br>
