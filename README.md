@@ -1,7 +1,7 @@
 # IoT_AES-128
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Plain AES-128 implementation (Rijndael Algorithm) for embedded system based IoT module (Tested in Particle Photon).
+Plain AES-128 implementation (Rijndael Algorithm) for embedded system and IoT module (Tested in Particle Photon).
 References of this implementation (Many thanks to them):
 
 Project Nayuki: https://www.nayuki.io/page/cryptographic-primitives-in-plain-python
