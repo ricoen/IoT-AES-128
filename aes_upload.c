@@ -33,7 +33,7 @@ IPAddress remoteIP(192,168,43,113);
 int udpPort = 1337;
 
 /*
---- Program enkripsi dimulai di sini ---
+Encryption program starts here
 */
 #define Nb 4
 
@@ -234,10 +234,9 @@ void loop() {
 	int i;
 	char enc[33];
 
-		Nr = 128;
-
-		Nk = Nr / 32;
-		Nr = Nk + 6;
+	Nr = 128;
+	Nk = Nr / 32;
+	Nr = Nk + 6;
 
 	float t = bme.readTemperature(); // *C
 	float h = bme.readHumidity(); // %
@@ -280,7 +279,6 @@ void loop() {
 	}
 
 	KeyExpansion();
-
 	Cipher();
 
 	Serial.printlnf("Ciphertext:");

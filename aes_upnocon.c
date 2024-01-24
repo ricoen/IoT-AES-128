@@ -23,7 +23,7 @@ double temp;
 double humidity;
 
 /*
---- Encryption program starts here ---
+Encryption program starts here
 */
 #define Nb 4
 
@@ -265,7 +265,6 @@ void encrypt() {
 	}
 
 	KeyExpansion();
-
 	Cipher();
 
 	Serial.printlnf("Ciphertext:");
